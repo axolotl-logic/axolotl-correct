@@ -1,0 +1,27 @@
+{
+  "name": "axolotl-correctness",
+  "version": "1.0.0",
+  "description": "Reason about the correctness of functions via a combination of formal methods and dynamic analysis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axolotl-logic/axolotl-correctness.git"
+  },
+  "author": "Axolotl-Logic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axolotl-logic/axolotl-correctness/issues"
+  },
+  "homepage": "https://github.com/axolotl-logic/axolotl-correctness#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
+    "prettier": "3.5.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "vitest": "^3.0.9"
+  }
+}
