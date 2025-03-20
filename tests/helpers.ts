@@ -1,10 +1,10 @@
 import { expect, test } from "vitest";
 
-export function testIdempotentOver<T, O>(
+export function testIdempotentUnder<T, O>(
   f: (a: T, b: T) => T,
   possibleValues: T[],
   getValue?: (a: T) => O,
-) {
+): void {
   for (const x of possibleValues) {
     const name = `x • x should equal x, when x=${trunc(x)}`;
 
@@ -17,14 +17,14 @@ export function testIdempotentOver<T, O>(
   }
 }
 
-export function testCommunativeOver<T, O>(
+export function testCommunativeUnder<T, O>(
   f: (a: T, b: T) => T,
   possibleValues: T[],
   getValue?: (a: T) => O,
-) {
+): void {
   for (const x of possibleValues) {
     for (const y of possibleValues) {
-      const name = `x • y should equal y • x, when x=${trunc(x)} y=${trunc(y)}`;
+      const name = `communiative x • y should equal y • x, when x=${trunc(x)} y=${trunc(y)}`;
 
       test(name, () => {
         const left = f(x, y);
@@ -40,11 +40,11 @@ export function testCommunativeOver<T, O>(
   }
 }
 
-export function testIdentityPropertyOver<T>(
+export function testIdentityUnder<T>(
   f: (a: T, b: T) => T,
   identity: T,
   possibleValues: T[],
-) {
+): void {
   for (const x of possibleValues) {
     const name = `(x • identity) should equal x, when x=${trunc(x)} identity=${trunc(identity)}`;
 
@@ -54,15 +54,15 @@ export function testIdentityPropertyOver<T>(
   }
 }
 
-export function testAssociativityOver<T, O>(
+export function testAssociativeUnder<T, O>(
   f: (a: T, b: T) => T,
   possibleValues: T[],
   getValue?: (a: T) => O,
-) {
+): void {
   for (const x of possibleValues) {
     for (const y of possibleValues) {
       for (const z of possibleValues) {
-        const name = `(x + y) + z should equal x + (y + z), where x=${trunc(x)} y=${trunc(y)} z=${trunc(z)}`;
+        const name = `(x • y) • z should equal x • (y • z), where x=${trunc(x)} y=${trunc(y)} z=${trunc(z)}`;
 
         test(name, () => {
           const left = f(f(x, y), z);

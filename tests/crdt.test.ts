@@ -5,9 +5,9 @@ import {
   mergeGCounter,
 } from "../src/reference/g-counter";
 import {
-  testAssociativityOver,
-  testCommunativeOver,
-  testIdempotentOver,
+  testAssociativeUnder,
+  testCommunativeUnder,
+  testIdempotentUnder,
 } from "./helpers";
 
 describe("mergeGCounter", () => {
@@ -30,7 +30,7 @@ describe("mergeGCounter", () => {
     },
   ];
 
-  testAssociativityOver(mergeGCounter, universe, getValueGCounter);
-  testCommunativeOver(mergeGCounter, universe, getValueGCounter);
-  testIdempotentOver(mergeGCounter, universe, getValueGCounter);
+  testAssociativeUnder(mergeGCounter, universe, getValueGCounter);
+  testCommunativeUnder(mergeGCounter, universe, getValueGCounter);
+  testIdempotentUnder(mergeGCounter, universe, getValueGCounter);
 });

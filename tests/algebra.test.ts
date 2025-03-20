@@ -2,26 +2,26 @@ import { describe } from "vitest";
 import { add, multiply } from "../src/reference/algebra";
 
 import {
-  testAssociativityOver,
-  testCommunativeOver,
-  testIdempotentOver,
-  testIdentityPropertyOver,
+  testAssociativeUnder,
+  testCommunativeUnder,
+  testIdempotentUnder,
+  testIdentityUnder,
 } from "./helpers";
 
 describe("add", () => {
   const universe = [-1, 0, 0.25, 1, NaN];
 
-  testAssociativityOver(add, universe);
-  testCommunativeOver(add, universe);
-  testIdentityPropertyOver(add, 0, universe);
-  testIdempotentOver(add, [0]);
+  testAssociativeUnder(add, universe);
+  testCommunativeUnder(add, universe);
+  testIdentityUnder(add, 0, universe);
+  testIdempotentUnder(add, [0]);
 });
 
 describe("multiply", () => {
   const universe = [-1, 0, 0.25, 1, NaN];
 
-  testAssociativityOver(multiply, universe);
-  testCommunativeOver(multiply, universe);
-  testIdentityPropertyOver(multiply, 1, universe);
-  testIdempotentOver(multiply, [0]);
+  testAssociativeUnder(multiply, universe);
+  testCommunativeUnder(multiply, universe);
+  testIdentityUnder(multiply, 1, universe);
+  testIdempotentUnder(multiply, [0]);
 });
