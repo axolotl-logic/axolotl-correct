@@ -1,7 +1,7 @@
 {
   "name": "axolotl-correctness",
   "version": "1.0.0",
-  "description": "Reason about the correctness of functions via a combination of formal methods and dynamic analysis.",
+  "description": "Reason about the correctness of functions via a combination of formal methods and dynamic verification.",
   "main": "index.js",
   "scripts": {
     "test": "vitest"
