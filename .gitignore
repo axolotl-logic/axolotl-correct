@@ -64,3 +64,9 @@ package-lock.json
 .eslintcache
 *v8.log
 /lib/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
