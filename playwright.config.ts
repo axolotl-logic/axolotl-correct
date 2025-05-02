@@ -35,23 +35,23 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
+    /*{
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
+*/
 
-    /*
     {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
     },
 
+    /*
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
     */
-
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',
@@ -61,7 +61,6 @@ export default defineConfig({
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
     // },
-
     /* Test against branded browsers. */
     // {
     //   name: 'Microsoft Edge',

@@ -2,9 +2,12 @@
   "name": "axolotl-correctness",
   "version": "1.0.0",
   "description": "Reason about the correctness of functions via a combination of formal methods and dynamic verification.",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/fuzz.ts",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "launch": "node  --experimental-specifier-resolution=node --experimental-strip-types .",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -17,16 +20,22 @@
   },
   "homepage": "https://github.com/axolotl-logic/axolotl-correctness#readme",
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "eslint": "^9.22.0",
+    "@eslint/js": "^9.25.1",
+    "@playwright/test": "^1.51.1",
+    "@tsconfig/node-lts": "^22.0.1",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-istanbul": "^3.0.9",
+    "eslint": "^9.25.1",
     "prettier": "3.5.3",
-    "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.1",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.0",
     "vitest": "^3.0.9"
   },
   "dependencies": {
     "@types/assert": "^1.5.11",
     "assert": "^2.1.0",
+    "puppeteer": "^24.6.1",
+    "sharp": "^0.34.1",
     "uuid": "^11.1.0"
   }
 }

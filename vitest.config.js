@@ -2,6 +2,11 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   test: {
-    // ... Specify options here.
+    coverage: {
+      enabled: true,
+      provider: "istanbul",
+      reporter: "html-spa",
+      reportsDirectory: "reports/coverage",
+    },
   },
 });
